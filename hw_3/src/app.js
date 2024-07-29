@@ -26,7 +26,7 @@ const server = http.createServer((request, response) => {
     return;
   }
 
-  if (request.url === "/") {
+  if (request.url === "/main") {
     response.status = 200;
     response.statusMessage = "OK";
     response.header = "Content-Type: text/plain";
@@ -36,7 +36,7 @@ const server = http.createServer((request, response) => {
     return;
   }
 
-  if (request.url === "/?books/add-book") {
+  if (request.url === "/books/new_book") {
     response.status = 200;
     response.statusMessage = "OK";
     response.header = "Content-Type: application/json";
